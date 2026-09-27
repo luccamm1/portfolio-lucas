@@ -19,15 +19,16 @@
         <span class="logo-mark">&lt;/&gt;</span>
         <span class="logo-text">Lucas Medina</span>
       </a>
-      <button class="nav-toggle" aria-label="Abrir menú">
+      <button class="nav-toggle" data-i18n="nav.menu" aria-label="Abrir menú">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-menu">
-        <li><a href="#inicio" class="nav-link active">Inicio</a></li>
-        <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
-        <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
-        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        <li><a href="#inicio" class="nav-link active" data-i18n="nav.home">Inicio</a></li>
+        <li><a href="#proyectos" class="nav-link" data-i18n="nav.projects">Proyectos</a></li>
+        <li><a href="#habilidades" class="nav-link" data-i18n="nav.skills">Habilidades</a></li>
+        <li><a href="#contacto" class="nav-link" data-i18n="nav.contact">Contacto</a></li>
       </ul>
+      <button id="lang-toggle" class="lang-toggle" aria-label="Switch to English">EN</button>
     </div>
   </nav>
 
@@ -39,28 +40,28 @@
       <div class="grid-bg"></div>
     </div>
     <div class="container hero-content">
-      <div class="hero-badge">Disponible para proyectos</div>
+      <div class="hero-badge" data-i18n="hero.badge">Disponible para proyectos</div>
       <h1 class="hero-title">
-        Hola, soy <span class="gradient-text">Lucas Medina</span>
+        <span data-i18n="hero.greeting">Hola, soy</span> <span class="gradient-text">Lucas Medina</span>
       </h1>
       <p class="hero-subtitle">
         <span class="typing-text"></span><span class="typing-cursor">|</span>
       </p>
-      <p class="hero-description">
+      <p class="hero-description" data-i18n="hero.description">
         Creo aplicaciones web y de escritorio modernas con React, TypeScript y Next.js.
         Apasionado por construir experiencias digitales funcionales y bien diseñadas.
       </p>
       <div class="hero-actions">
         <a href="#proyectos" class="btn btn-primary">
-          Ver proyectos
+          <span data-i18n="hero.viewProjects">Ver proyectos</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
           </svg>
         </a>
-        <a href="#contacto" class="btn btn-outline">Contactar</a>
+        <a href="#contacto" class="btn btn-outline"><span data-i18n="hero.contact">Contactar</span></a>
       </div>
       <div class="hero-scroll">
-        <span>Desplázate</span>
+        <span data-i18n="hero.scroll">Desplázate</span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M7 13l5 5 5-5"/><path d="M7 6l5 5 5-5"/>
         </svg>
@@ -71,9 +72,9 @@
   <section id="proyectos" class="section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Portfolio</span>
-        <h2 class="section-title">Proyectos <span class="gradient-text">Destacados</span></h2>
-        <p class="section-desc">Proyectos reales con tecnologías modernas.</p>
+        <span class="section-tag" data-i18n="projects.tag">Portfolio</span>
+        <h2 class="section-title"><span data-i18n="projects.title">Proyectos Destacados</span></h2>
+        <p class="section-desc" data-i18n="projects.desc">Proyectos reales con tecnologías modernas.</p>
       </div>
       <div class="projects-grid">
         <article class="project-card">
@@ -82,10 +83,10 @@
           </div>
           <div class="project-body">
             <div class="project-header">
-              <h3 class="project-title">Sistema de Facturación</h3>
+              <h3 class="project-title" data-i18n="projects.invoicing">Sistema de Facturación</h3>
               <span class="project-year">2024</span>
             </div>
-            <p class="project-desc">
+            <p class="project-desc" data-i18n="projects.invoicingDesc">
               Sistema de escritorio para gestión de ventas e inventario con códigos de barras. Sincronización en la nube con Supabase.
             </p>
             <div class="project-tech">
@@ -97,7 +98,7 @@
               <span class="tech-badge">Vite</span>
             </div>
             <div class="project-links">
-              <span class="btn btn-sm btn-disabled">App de escritorio</span>
+              <span class="btn btn-sm btn-disabled" data-i18n="projects.desktop">App de escritorio</span>
             </div>
           </div>
         </article>
@@ -111,7 +112,7 @@
               <h3 class="project-title">KawSay</h3>
               <span class="project-year">2025</span>
             </div>
-            <p class="project-desc">
+            <p class="project-desc" data-i18n="projects.kawsayDesc">
               Tienda online de alimentos saludables con carrito de compras, gestión de productos y pedidos vía WhatsApp.
             </p>
             <div class="project-tech">
@@ -123,7 +124,7 @@
             </div>
             <div class="project-links">
               <a href="https://kawsayweb.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
-                Demo
+                <span data-i18n="projects.demo">Demo</span>
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
                 </svg>
@@ -138,10 +139,10 @@
           </div>
           <div class="project-body">
             <div class="project-header">
-              <h3 class="project-title">Dripping Style</h3>
+              <h3 class="project-title" data-i18n="projects.dripping">Dripping Style</h3>
               <span class="project-year">2026</span>
             </div>
-            <p class="project-desc">
+            <p class="project-desc" data-i18n="projects.drippingDesc">
               E-commerce moderno con pasarela de pagos Mercado Pago, carrito de compras y panel de administración completo.
             </p>
             <div class="project-tech">
@@ -154,7 +155,7 @@
             </div>
             <div class="project-links">
               <a href="https://dripping-style.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
-                Demo
+                <span data-i18n="projects.demo">Demo</span>
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
                 </svg>
@@ -169,13 +170,13 @@
   <section id="habilidades" class="section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Stack</span>
-        <h2 class="section-title">Tecnologías que <span class="gradient-text">domino</span></h2>
-        <p class="section-desc">Herramientas con las que construyo productos.</p>
+        <span class="section-tag" data-i18n="skills.tag">Stack</span>
+        <h2 class="section-title" data-i18n="skills.title">Tecnologías que <span class="gradient-text">domino</span></h2>
+        <p class="section-desc" data-i18n="skills.desc">Herramientas con las que construyo productos.</p>
       </div>
       <div class="skills-categories">
         <div class="skills-category">
-          <h3 class="skills-cat-title">Frontend</h3>
+          <h3 class="skills-cat-title" data-i18n="skills.frontend">Frontend</h3>
           <div class="skills-grid">
             <div class="skill-item" data-color="#61dafb"><span class="skill-icon">React</span></div>
             <div class="skill-item" data-color="#000000"><span class="skill-icon">Next.js</span></div>
@@ -186,7 +187,7 @@
           </div>
         </div>
         <div class="skills-category">
-          <h3 class="skills-cat-title">Backend & Tools</h3>
+          <h3 class="skills-cat-title" data-i18n="skills.backend">Backend & Tools</h3>
           <div class="skills-grid">
             <div class="skill-item" data-color="#3ecf8e"><span class="skill-icon">Supabase</span></div>
             <div class="skill-item" data-color="#47848f"><span class="skill-icon">Electron</span></div>
@@ -203,9 +204,9 @@
   <section id="contacto" class="section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Contacto</span>
-        <h2 class="section-title">¿Trabajamos <span class="gradient-text">juntos</span>?</h2>
-        <p class="section-desc">Estoy abierto a nuevos proyectos y oportunidades.</p>
+        <span class="section-tag" data-i18n="contact.tag">Contacto</span>
+        <h2 class="section-title" data-i18n="contact.title">¿Trabajamos <span class="gradient-text">juntos</span>?</h2>
+        <p class="section-desc" data-i18n="contact.desc">Estoy abierto a nuevos proyectos y oportunidades.</p>
       </div>
       <div class="contact-grid">
         <a href="mailto:lucasmedina21035@gmail.com" class="contact-card">
@@ -214,9 +215,9 @@
               <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
             </svg>
           </div>
-          <span class="contact-label">Email</span>
+          <span class="contact-label" data-i18n="contact.email">Email</span>
           <span class="contact-value">lucasmedina21035@gmail.com</span>
-          <span class="contact-action">Enviar mensaje &rarr;</span>
+          <span class="contact-action" data-i18n="contact.send">Enviar mensaje &rarr;</span>
         </a>
         <a href="https://github.com/luccamm1" target="_blank" rel="noopener noreferrer" class="contact-card">
           <div class="contact-icon-wrap">
@@ -224,9 +225,9 @@
               <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
             </svg>
           </div>
-          <span class="contact-label">GitHub</span>
+          <span class="contact-label" data-i18n="contact.github">GitHub</span>
           <span class="contact-value">@luccamm1</span>
-          <span class="contact-action">Ver repositorios &rarr;</span>
+          <span class="contact-action" data-i18n="contact.viewRepos">Ver repositorios &rarr;</span>
         </a>
         <a href="https://wa.me/543816488648" target="_blank" rel="noopener noreferrer" class="contact-card">
           <div class="contact-icon-wrap">
@@ -234,9 +235,9 @@
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
             </svg>
           </div>
-          <span class="contact-label">WhatsApp</span>
-          <span class="contact-value">Chateemos</span>
-          <span class="contact-action">Escribirme &rarr;</span>
+          <span class="contact-label" data-i18n="contact.whatsapp">WhatsApp</span>
+          <span class="contact-value" data-i18n="contact.chat">Chateemos</span>
+          <span class="contact-action" data-i18n="contact.messageMe">Escribirme &rarr;</span>
         </a>
       </div>
     </div>
@@ -245,10 +246,11 @@
   <footer class="footer">
     <div class="container footer-content">
       <div class="footer-logo">&lt;/&gt; Lucas Medina</div>
-      <p>&copy; 2026 Lucas Medina. Todos los derechos reservados.</p>
+      <p>&copy; 2026 Lucas Medina. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

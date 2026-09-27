@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+  I18n.init();
+
   /* ==================== Cursor ==================== */
   const cursor = document.getElementById('cursor');
   let mouseX = 0, mouseY = 0;

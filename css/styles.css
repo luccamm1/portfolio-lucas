@@ -547,6 +547,7 @@ img { max-width: 100%; display: block; }
   position: relative;
   overflow-wrap: break-word;
   word-wrap: break-word;
+  cursor: pointer;
 }
 
 .project-card::before {

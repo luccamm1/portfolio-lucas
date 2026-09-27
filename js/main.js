@@ -143,6 +143,22 @@ document.addEventListener('DOMContentLoaded', () => {
     observerReveal.observe(el);
   });
 
+  /* ==================== Project Card Navigation ==================== */
+  document.querySelectorAll('.project-card').forEach(card => {
+    const projectId = card.getAttribute('data-project');
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('a')) return;
+      window.location.href = `project.html?p=${projectId}`;
+    });
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        if (e.target.closest('a')) return;
+        window.location.href = `project.html?p=${projectId}`;
+      }
+    });
+  });
+
   /* ==================== Parallax Orbs ==================== */
   document.querySelectorAll('.orb').forEach((orb, i) => {
     const speed = 0.02 + i * 0.01;

@@ -24,12 +24,12 @@ const I18n = (() => {
       "projects.demo": "Demo",
       "projects.desktop": "App de escritorio",
       "skills.tag": "Stack",
-      "skills.title": "Tecnologías que domino",
+      "skills.title": "Tecnologías que",
       "skills.desc": "Herramientas con las que construyo productos.",
       "skills.frontend": "Frontend",
       "skills.backend": "Backend & Tools",
       "contact.tag": "Contacto",
-      "contact.title": "¿Trabajamos juntos?",
+      "contact.title": "¿Trabajamos",
       "contact.desc": "Estoy abierto a nuevos proyectos y oportunidades.",
       "contact.email": "Email",
       "contact.github": "GitHub",
@@ -68,12 +68,12 @@ const I18n = (() => {
       "projects.demo": "Demo",
       "projects.desktop": "Desktop app",
       "skills.tag": "Stack",
-      "skills.title": "Technologies I Master",
+      "skills.title": "Technologies I",
       "skills.desc": "Tools I use to build products.",
       "skills.frontend": "Frontend",
       "skills.backend": "Backend & Tools",
       "contact.tag": "Contact",
-      "contact.title": "Shall we work together?",
+      "contact.title": "Shall we",
       "contact.desc": "I'm open to new projects and opportunities.",
       "contact.email": "Email",
       "contact.github": "GitHub",
@@ -119,13 +119,14 @@ const I18n = (() => {
     document.querySelectorAll("[data-i18n]").forEach((el) => {
       const key = el.getAttribute("data-i18n");
       if (translations[lang][key]) {
-        const hasSpan = el.querySelector("span.gradient-text");
-        if (hasSpan) {
-          const textNode = Array.from(el.childNodes).find(
-            (n) => n.nodeType === Node.TEXT_NODE && n.textContent.trim()
-          );
-          if (textNode) textNode.textContent = translations[lang][key] + " ";
-        } else if (el.querySelector("span, svg, img")) {
+        const gradientSpan = el.querySelector(":scope > span.gradient-text");
+        if (gradientSpan) {
+          Array.from(el.childNodes).forEach((node) => {
+            if (node !== gradientSpan) node.remove();
+          });
+          const textNode = document.createTextNode(translations[lang][key] + " ");
+          el.insertBefore(textNode, gradientSpan);
+        } else if (el.querySelector(":scope > span, :scope > svg, :scope > img")) {
           const textNode = Array.from(el.childNodes).find(
             (n) => n.nodeType === Node.TEXT_NODE && n.textContent.trim()
           );
@@ -133,6 +134,17 @@ const I18n = (() => {
         } else {
           el.textContent = translations[lang][key];
         }
+      }
+    });
+
+    document.querySelectorAll("[data-i18n-gradient]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-gradient");
+      const gradientTranslations = {
+        es: { "domino": "domino", "juntos?": "juntos?" },
+        en: { "domino": "master", "juntos?": "work together?" },
+      };
+      if (gradientTranslations[lang][key]) {
+        el.textContent = gradientTranslations[lang][key];
       }
     });
 

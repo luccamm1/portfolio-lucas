@@ -538,12 +538,15 @@ img { max-width: 100%; display: block; }
 }
 
 .project-card {
+  display: block;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .project-card::before {
@@ -600,6 +603,8 @@ img { max-width: 100%; display: block; }
 
 .project-body {
   padding: 24px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .project-header {
@@ -613,6 +618,8 @@ img { max-width: 100%; display: block; }
   font-size: 1.15rem;
   font-weight: 700;
   letter-spacing: -0.01em;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .project-year {
@@ -629,6 +636,8 @@ img { max-width: 100%; display: block; }
   font-size: 0.9rem;
   line-height: 1.65;
   margin-bottom: 18px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .project-tech {
@@ -821,12 +830,17 @@ img { max-width: 100%; display: block; }
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-top: 4px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .contact-value {
   font-size: 0.9rem;
   color: var(--text-primary);
   font-weight: 500;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 .contact-action {
@@ -836,6 +850,8 @@ img { max-width: 100%; display: block; }
   opacity: 0;
   transform: translateY(4px);
   transition: all 0.3s;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .contact-card:hover .contact-action {

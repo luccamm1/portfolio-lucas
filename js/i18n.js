@@ -139,9 +139,9 @@ const I18n = (() => {
   }
 
   function init() {
-    const toggle = document.getElementById("lang-toggle");
-    if (toggle) {
-      toggle.addEventListener("click", toggle);
+    const langBtn = document.getElementById("lang-toggle");
+    if (langBtn) {
+      langBtn.addEventListener("click", toggle);
     }
     applyLang(currentLang);
   }

@@ -141,6 +141,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   list-style: none;
   gap: 4px;
+  margin-right: 70px;
 }
 
 .nav-link {
@@ -886,6 +887,7 @@ img { max-width: 100%; display: block; }
     top: 68px;
     left: 12px;
     right: 12px;
+    margin-right: 0;
     background: rgba(8, 8, 15, 0.97);
     backdrop-filter: blur(20px);
     border: 1px solid var(--border);

@@ -39,6 +39,10 @@ const I18n = (() => {
       "contact.viewRepos": "Ver repositorios",
       "contact.messageMe": "Escribirme",
       "footer.rights": "Todos los derechos reservados.",
+      "project.back": "Volver a proyectos",
+      "project.howMade": "Cómo se creó",
+      "project.techUsed": "Tecnologías usadas",
+      "project.challenges": "Desafíos y soluciones",
     },
     en: {
       "nav.home": "Home",
@@ -79,6 +83,10 @@ const I18n = (() => {
       "contact.viewRepos": "View repositories",
       "contact.messageMe": "Message me",
       "footer.rights": "All rights reserved.",
+      "project.back": "Back to projects",
+      "project.howMade": "How it was built",
+      "project.techUsed": "Technologies used",
+      "project.challenges": "Challenges and solutions",
     },
   };
 

@@ -195,6 +195,10 @@ img { max-width: 100%; display: block; }
 }
 
 .lang-toggle {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -209,12 +213,13 @@ img { max-width: 100%; display: block; }
   transition: all var(--transition);
   letter-spacing: 0.05em;
   font-family: var(--font);
+  z-index: 1001;
 }
 
 .lang-toggle:hover {
   background: rgba(6, 182, 212, 0.15);
   border-color: rgba(6, 182, 212, 0.3);
-  transform: translateY(-1px);
+  transform: translateY(-50%) scale(1.05);
 }
 
 /* --- Hero --- */
@@ -909,6 +914,10 @@ img { max-width: 100%; display: block; }
 
   .nav-toggle {
     display: flex;
+  }
+
+  .lang-toggle {
+    right: 60px;
   }
 
   .navbar {

@@ -111,7 +111,14 @@ const I18n = (() => {
     document.querySelectorAll("[data-i18n]").forEach((el) => {
       const key = el.getAttribute("data-i18n");
       if (translations[lang][key]) {
-        el.textContent = translations[lang][key];
+        if (el.querySelector("span, svg, img")) {
+          const textNode = Array.from(el.childNodes).find(
+            (n) => n.nodeType === Node.TEXT_NODE && n.textContent.trim()
+          );
+          if (textNode) textNode.textContent = translations[lang][key];
+        } else {
+          el.textContent = translations[lang][key];
+        }
       }
     });
 
@@ -119,6 +126,11 @@ const I18n = (() => {
     if (toggle) {
       toggle.textContent = lang === "es" ? "EN" : "ES";
       toggle.setAttribute("aria-label", lang === "es" ? "Switch to English" : "Cambiar a español");
+    }
+
+    const navToggle = document.querySelector(".nav-toggle");
+    if (navToggle) {
+      navToggle.setAttribute("aria-label", translations[lang]["nav.menu"]);
     }
   }
 

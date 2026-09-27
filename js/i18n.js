@@ -119,7 +119,13 @@ const I18n = (() => {
     document.querySelectorAll("[data-i18n]").forEach((el) => {
       const key = el.getAttribute("data-i18n");
       if (translations[lang][key]) {
-        if (el.querySelector("span, svg, img")) {
+        const hasSpan = el.querySelector("span.gradient-text");
+        if (hasSpan) {
+          const textNode = Array.from(el.childNodes).find(
+            (n) => n.nodeType === Node.TEXT_NODE && n.textContent.trim()
+          );
+          if (textNode) textNode.textContent = translations[lang][key] + " ";
+        } else if (el.querySelector("span, svg, img")) {
           const textNode = Array.from(el.childNodes).find(
             (n) => n.nodeType === Node.TEXT_NODE && n.textContent.trim()
           );

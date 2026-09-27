@@ -958,6 +958,8 @@ img { max-width: 100%; display: block; }
   border-radius: var(--radius);
   padding: 28px;
   transition: all var(--transition);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .project-step:hover {
@@ -998,6 +1000,8 @@ img { max-width: 100%; display: block; }
   border-radius: var(--radius);
   padding: 24px;
   transition: all var(--transition);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .tech-detail-card:hover {
@@ -1030,6 +1034,8 @@ img { max-width: 100%; display: block; }
   border-left: 3px solid var(--accent);
   border-radius: var(--radius);
   padding: 28px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .challenge-title {

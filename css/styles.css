@@ -889,18 +889,27 @@ img { max-width: 100%; display: block; }
 }
 
 .back-link {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 100;
   display: inline-flex;
   align-items: center;
   gap: 8px;
   color: var(--text-secondary);
   font-size: 0.85rem;
   font-weight: 500;
-  margin-top: 32px;
-  transition: color var(--transition);
+  padding: 10px 16px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-secondary);
+  backdrop-filter: blur(10px);
+  transition: color var(--transition), border-color var(--transition);
 }
 
 .back-link:hover {
   color: var(--accent);
+  border-color: var(--accent);
 }
 
 .project-hero .container {

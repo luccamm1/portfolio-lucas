@@ -184,6 +184,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let lang = localStorage.getItem("lang") || "es";
 
+  document.getElementById("lang-toggle").addEventListener("click", () => {
+    lang = lang === "es" ? "en" : "es";
+    localStorage.setItem("lang", lang);
+    render();
+  });
+
   function render() {
     document.documentElement.lang = lang;
     const t = (obj) => obj[lang];
@@ -251,11 +257,6 @@ document.addEventListener("DOMContentLoaded", () => {
       .join("");
 
     I18n.applyLang(lang);
-
-    document.getElementById("lang-toggle").addEventListener("click", () => {
-      lang = lang === "es" ? "en" : "es";
-      render();
-    });
 
     const revealElements = document.querySelectorAll(".reveal");
     const observerReveal = new IntersectionObserver(

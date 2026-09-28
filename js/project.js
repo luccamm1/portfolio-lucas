@@ -252,6 +252,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     I18n.applyLang(lang);
 
+    document.getElementById("lang-toggle").addEventListener("click", () => {
+      lang = lang === "es" ? "en" : "es";
+      render();
+    });
+
     const revealElements = document.querySelectorAll(".reveal");
     const observerReveal = new IntersectionObserver(
       (entries) => {
